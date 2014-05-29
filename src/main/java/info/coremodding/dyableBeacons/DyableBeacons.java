@@ -20,6 +20,13 @@ public class DyableBeacons {
 	public static final String MOD_ID = "DyableBeacons";
 	public static final String MOD_NAME = "Dyable Beacons";
 	
+	private static final String[] dyableBeaconNames = { 
+		"White Beacon", "Orange Beacon", "Magenta Beacon", "Light Blue Beacon",
+		"Yellow Beacon", "Light Green Beacon", "Pink Beacon", "Dark Grey Beacon",
+		"Light Grey Beacon", "Cyan Beacon", "Purple Beacon", "Blue Beacon",
+		"Brown Beacon", "Green Beacon", "Red Beacon", "Black Beacon"
+	};
+	
     @Instance(MOD_ID)
     public static DyableBeacons instance;
     
@@ -35,10 +42,12 @@ public class DyableBeacons {
     	GameRegistry.registerTileEntity(TileEntityDyableBeacon.class, "dyableBeacon");
     	
 		for (int ix = 0; ix < 16; ix++) {
-			ItemStack cloth = new ItemStack(Block.getBlockFromName("stained_glass"), 1, ix);
-			ItemStack multiBlockStack = new ItemStack(dyableBeacon, 1, ix);
+			ItemStack glass = new ItemStack(Block.getBlockFromName("stained_glass"), 1, ix);
+			ItemStack dyableBeaconItemStack = new ItemStack(dyableBeacon, 1, ix);
 			
-			GameRegistry.addShapelessRecipe(multiBlockStack, cloth, cloth);
+			LanguageRegistry.addName(dyableBeaconItemStack, dyableBeaconNames[dyableBeaconItemStack.getItemDamage()]);
+			
+			GameRegistry.addShapelessRecipe(dyableBeaconItemStack, glass, Block.getBlockFromName("beacon"));
 		}
     }
     
