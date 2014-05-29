@@ -1,0 +1,16 @@
+[
+{
+  "modid": "DyableBeacons",
+  "name": "Dyable Beacons",
+  "description": "Make your beacons colorful",
+  "version": "",
+  "credits": "",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["nxsupert", "Core Modding"],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": []
+}
+]
