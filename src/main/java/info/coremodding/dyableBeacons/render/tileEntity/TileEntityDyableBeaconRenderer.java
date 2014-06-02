@@ -1,6 +1,5 @@
 package info.coremodding.dyableBeacons.render.tileEntity;
 
-import info.coremodding.dyableBeacons.DyableBeacons;
 import info.coremodding.dyableBeacons.tileEntity.TileEntityDyableBeacon;
 
 import org.lwjgl.opengl.GL11;
@@ -128,6 +127,7 @@ public class TileEntityDyableBeaconRenderer extends TileEntitySpecialRenderer{
             GL11.glEnable(GL11.GL_TEXTURE_2D);
             GL11.glDepthMask(true);
         }
+        
 
         GL11.glAlphaFunc(GL11.GL_GREATER, 0.5F);
     }
