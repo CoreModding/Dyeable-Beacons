@@ -3,10 +3,10 @@ package info.coremodding.dyeablebeacons.blocks;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockBeacon;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -54,7 +54,7 @@ public class BlockDyeableBeacon extends BlockBeacon {
 
   @Override
   public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
-    return Block.getBlockFromName("stained_glass").getIcon(p_149691_1_, p_149691_2_);
+    return Blocks.stained_glass.getIcon(p_149691_1_, p_149691_2_);
   }
 
 
