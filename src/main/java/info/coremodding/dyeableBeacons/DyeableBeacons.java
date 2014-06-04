@@ -15,7 +15,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = DyeableBeacons.MOD_ID, name = DyeableBeacons.MOD_NAME , version = "1.1")
+@Mod(modid = DyeableBeacons.MOD_ID, name = DyeableBeacons.MOD_NAME , version = "1.1.1")
 public class DyeableBeacons {
 	public static final String MOD_ID = "DyeableBeacons";
 	public static final String MOD_NAME = "Dyeable Beacons";
@@ -30,7 +30,7 @@ public class DyeableBeacons {
     @Instance(MOD_ID)
     public static DyeableBeacons instance;
     
-    @SidedProxy(clientSide = "info.coremodding.dyableBeacons.proxy.ClientProxy", serverSide = "info.coremodding.dyableBeacons.proxy.CommonProxy", modId = MOD_ID)
+    @SidedProxy(clientSide = "info.coremodding.dyeableBeacons.proxy.ClientProxy", serverSide = "info.coremodding.dyeableBeacons.proxy.CommonProxy", modId = MOD_ID)
   	public static CommonProxy proxy;
     
     private Block dyableBeacon = new BlockDyeableBeacon().setBlockName("dyableBeacon").setLightLevel(1.0F).setBlockTextureName("beacon");
