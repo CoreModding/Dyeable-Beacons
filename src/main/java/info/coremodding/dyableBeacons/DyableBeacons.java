@@ -15,12 +15,12 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = DyableBeacons.MOD_ID, name = DyableBeacons.MOD_NAME)
+@Mod(modid = DyableBeacons.MOD_ID, name = DyableBeacons.MOD_NAME , version = "1.1")
 public class DyableBeacons {
-	public static final String MOD_ID = "DyableBeacons";
-	public static final String MOD_NAME = "Dyable Beacons";
+	public static final String MOD_ID = "DyeableBeacons";
+	public static final String MOD_NAME = "Dyeable Beacons";
 	
-	private static final String[] dyableBeaconNames = { 
+	private static final String[] dyeableBeaconNames = { 
 		"White Beacon", "Orange Beacon", "Magenta Beacon", "Light Blue Beacon",
 		"Yellow Beacon", "Light Green Beacon", "Pink Beacon", "Dark Grey Beacon",
 		"Light Grey Beacon", "Cyan Beacon", "Purple Beacon", "Blue Beacon",
@@ -38,14 +38,16 @@ public class DyableBeacons {
     
     @EventHandler
     public void preInitialization(FMLPreInitializationEvent preEvent) {
-    	GameRegistry.registerBlock(dyableBeacon, ItemBlockDyableBeacon.class, "dyableBeacon");
-    	GameRegistry.registerTileEntity(TileEntityDyableBeacon.class, "dyableBeacon");
+    	GameRegistry.registerBlock(dyableBeacon, ItemBlockDyableBeacon.class, "dyeableBeacon");
+    	GameRegistry.registerTileEntity(TileEntityDyableBeacon.class, "dyeableBeacon");
+    	
+    	
     	
 		for (int ix = 0; ix < 16; ix++) {
 			ItemStack glass = new ItemStack(Block.getBlockFromName("stained_glass"), 1, ix);
 			ItemStack dyableBeaconItemStack = new ItemStack(dyableBeacon, 1, ix);
 			
-			LanguageRegistry.addName(dyableBeaconItemStack, dyableBeaconNames[dyableBeaconItemStack.getItemDamage()]);
+			LanguageRegistry.addName(dyableBeaconItemStack, dyeableBeaconNames[dyableBeaconItemStack.getItemDamage()]);
 			
 			GameRegistry.addShapelessRecipe(dyableBeaconItemStack, glass, Block.getBlockFromName("beacon"));
 		}
