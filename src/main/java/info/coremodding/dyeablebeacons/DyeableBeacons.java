@@ -16,7 +16,7 @@ import info.coremodding.dyeablebeacons.blocks.BlockDyeableBeacon;
 import info.coremodding.dyeablebeacons.items.ItemBlockDyableBeacon;
 import info.coremodding.dyeablebeacons.library.Reference;
 import info.coremodding.dyeablebeacons.proxy.Proxy;
-import info.coremodding.dyeablebeacons.tileentity.TileEntityDyableBeacon;
+import info.coremodding.dyeablebeacons.tileentity.TileEntityDyeableBeacon;
 
 @Mod(modid = Reference.Mod.ID, name = Reference.Mod.NAME, version = Reference.Mod.VERSION)
 public class DyeableBeacons {
@@ -34,7 +34,7 @@ public class DyeableBeacons {
   @EventHandler
   public void preInitialization(FMLPreInitializationEvent preEvent) {
     GameRegistry.registerBlock(dyeableBeacon, ItemBlockDyableBeacon.class, dyeableBeacon.getUnlocalizedName());
-    GameRegistry.registerTileEntity(TileEntityDyableBeacon.class, dyeableBeacon.getUnlocalizedName());
+    GameRegistry.registerTileEntity(TileEntityDyeableBeacon.class, dyeableBeacon.getUnlocalizedName());
     
     for (int color = 0; color < ItemDye.field_150923_a.length; color++) {
       ItemStack glass = new ItemStack(Blocks.stained_glass, 1, color);

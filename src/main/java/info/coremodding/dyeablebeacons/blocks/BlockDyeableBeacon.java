@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import info.coremodding.dyeablebeacons.tileentity.TileEntityDyableBeacon;
+import info.coremodding.dyeablebeacons.tileentity.TileEntityDyeableBeacon;
 
 public class BlockDyeableBeacon extends BlockBeacon {
   public BlockDyeableBeacon() {
@@ -33,7 +33,7 @@ public class BlockDyeableBeacon extends BlockBeacon {
 
   @Override
   public TileEntity createNewTileEntity(World world, int meta) {
-    return new TileEntityDyableBeacon();
+    return new TileEntityDyeableBeacon();
   }
 
   @Override

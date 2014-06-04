@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
-import info.coremodding.dyeablebeacons.tileentity.TileEntityDyableBeacon;
+import info.coremodding.dyeablebeacons.tileentity.TileEntityDyeableBeacon;
 
 public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
   private static final ResourceLocation beaconTexture = new ResourceLocation(
@@ -36,7 +36,7 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
     {221, 221, 221} //white
   };
 
-  public void renderTileEntityAt(TileEntityDyableBeacon tileEntity, double p_147522_2_,
+  public void renderTileEntityAt(TileEntityDyeableBeacon tileEntity, double p_147522_2_,
       double p_147522_4_, double p_147522_6_, float p_147522_8_) {
     float f1 = tileEntity.func_146002_i();
     GL11.glAlphaFunc(GL11.GL_GREATER, 0.1F);
@@ -151,7 +151,7 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
   @Override
   public void renderTileEntityAt(TileEntity p_147500_1_, double p_147500_2_, double p_147500_4_,
       double p_147500_6_, float p_147500_8_) {
-    this.renderTileEntityAt((TileEntityDyableBeacon) p_147500_1_, p_147500_2_, p_147500_4_,
+    this.renderTileEntityAt((TileEntityDyeableBeacon) p_147500_1_, p_147500_2_, p_147500_4_,
         p_147500_6_, p_147500_8_);
   }
 }

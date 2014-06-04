@@ -4,7 +4,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityBeacon;
 import net.minecraft.util.AxisAlignedBB;
 
-public class TileEntityDyableBeacon extends TileEntityBeacon {
+public class TileEntityDyeableBeacon extends TileEntityBeacon {
 
 	@Override
 	public double getMaxRenderDistanceSquared() {
