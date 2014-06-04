@@ -5,4 +5,4 @@
  * @author ethan
  *
  */
-package info.coremodding.dyableBeacons;
+package info.coremodding.dyeableBeacons;

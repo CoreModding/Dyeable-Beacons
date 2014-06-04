@@ -1,4 +1,4 @@
-package info.coremodding.dyableBeacons.items;
+package info.coremodding.dyeableBeacons.items;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
