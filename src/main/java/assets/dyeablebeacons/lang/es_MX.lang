@@ -1,0 +1,17 @@
+#Beacon colors
+tile.dyeableBeacon.black.name=Faro mágico Negro
+tile.dyeableBeacon.red.name=Faro mágico Rojo
+tile.dyeablebeacon.green=Faro mágico Verde
+tile.dyeablebeacon.brown=Faro mágico Café
+tile.dyeablebeacon.blue=Faro mágico Azul
+tile.dyeablebeacon.purple=Faro mágico Púrpura
+tile.dyeablebeacon.cyan=Faro mágico Cian
+tile.dyeablebeacon.silver=Faro mágico Gris Claro
+tile.dyeablebeacon.gray=Faro mágico Gris
+tile.dyeablebeacon.pink=Faro mágico Rosa
+tile.dyeablebeacon.lime=Faro mágico Verde Claro
+tile.dyeablebeacon.yellow=Faro mágico Amarillo
+tile.dyeablebeacon.lightBlue=Faro mágico Azul Claro
+tile.dyeablebeacon.magenta=Faro mágico Magenta
+tile.dyeablebeacon.orange=Faro mágico Naranja
+tile.dyeablebeacon.white=Faro mágico Blanco
