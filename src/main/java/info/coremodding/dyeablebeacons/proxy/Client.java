@@ -1,13 +1,13 @@
-package info.coremodding.dyeableBeacons.proxy;
+package info.coremodding.dyeablebeacons.proxy;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
-import info.coremodding.dyeableBeacons.blocks.BlockDyeableBeacon;
-import info.coremodding.dyeableBeacons.render.blocks.RenderDyeableBeacons;
-import info.coremodding.dyeableBeacons.render.tileEntity.TileEntityDyeableBeaconRenderer;
-import info.coremodding.dyeableBeacons.tileEntity.TileEntityDyableBeacon;
+import info.coremodding.dyeablebeacons.blocks.BlockDyeableBeacon;
+import info.coremodding.dyeablebeacons.render.blocks.RenderDyeableBeacons;
+import info.coremodding.dyeablebeacons.render.tileentity.TileEntityDyeableBeaconRenderer;
+import info.coremodding.dyeablebeacons.tileentity.TileEntityDyableBeacon;
 
 public class Client implements Proxy {
 

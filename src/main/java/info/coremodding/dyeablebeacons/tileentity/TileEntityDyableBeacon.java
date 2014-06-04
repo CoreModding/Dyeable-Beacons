@@ -1,4 +1,4 @@
-package info.coremodding.dyeableBeacons.tileEntity;
+package info.coremodding.dyeablebeacons.tileentity;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityBeacon;
