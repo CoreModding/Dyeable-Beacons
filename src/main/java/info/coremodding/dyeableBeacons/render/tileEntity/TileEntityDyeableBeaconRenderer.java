@@ -1,7 +1,7 @@
-package info.coremodding.dyableBeacons.render.tileEntity;
+package info.coremodding.dyeableBeacons.render.tileEntity;
 
-import info.coremodding.dyableBeacons.DyableBeacons;
-import info.coremodding.dyableBeacons.tileEntity.TileEntityDyableBeacon;
+import info.coremodding.dyeableBeacons.tileEntity.TileEntityDyableBeacon;
+import info.coremodding.dyeableBeacons.DyeableBeacons;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBeacon;
 import net.minecraft.client.Minecraft;
@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
-public class TileEntityDyableBeaconRenderer extends TileEntitySpecialRenderer{
+public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer{
 	private RenderBlocks renderBlocks;
 	private static final ResourceLocation beaconTexture = new ResourceLocation("textures/entity/beacon_beam.png");
 	private static final ResourceLocation beaconBlockTexture = new ResourceLocation("textures/blocks/beacon.png");

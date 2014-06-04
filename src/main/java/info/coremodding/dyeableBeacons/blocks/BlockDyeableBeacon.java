@@ -1,11 +1,11 @@
-package info.coremodding.dyableBeacons.blocks;
+package info.coremodding.dyeableBeacons.blocks;
 
 import java.util.List;
 import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import info.coremodding.dyableBeacons.tileEntity.TileEntityDyableBeacon;
+import info.coremodding.dyeableBeacons.tileEntity.TileEntityDyableBeacon;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBeacon;
 import net.minecraft.block.material.Material;
@@ -19,7 +19,7 @@ import net.minecraft.tileentity.TileEntityBeacon;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class BlockDyableBeacon extends BlockBeacon {
+public class BlockDyeableBeacon extends BlockBeacon {
 	public static int renderID;
 	@Override
 	public int getRenderType()

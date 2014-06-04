@@ -1,9 +1,9 @@
-package info.coremodding.dyableBeacons;
+package info.coremodding.dyeableBeacons;
 
-import info.coremodding.dyableBeacons.blocks.BlockDyableBeacon;
-import info.coremodding.dyableBeacons.items.ItemBlockDyableBeacon;
-import info.coremodding.dyableBeacons.proxy.CommonProxy;
-import info.coremodding.dyableBeacons.tileEntity.TileEntityDyableBeacon;
+import info.coremodding.dyeableBeacons.blocks.BlockDyeableBeacon;
+import info.coremodding.dyeableBeacons.items.ItemBlockDyableBeacon;
+import info.coremodding.dyeableBeacons.proxy.CommonProxy;
+import info.coremodding.dyeableBeacons.tileEntity.TileEntityDyableBeacon;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
@@ -15,8 +15,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = DyableBeacons.MOD_ID, name = DyableBeacons.MOD_NAME , version = "1.1")
-public class DyableBeacons {
+@Mod(modid = DyeableBeacons.MOD_ID, name = DyeableBeacons.MOD_NAME , version = "1.1")
+public class DyeableBeacons {
 	public static final String MOD_ID = "DyeableBeacons";
 	public static final String MOD_NAME = "Dyeable Beacons";
 	
@@ -28,12 +28,12 @@ public class DyableBeacons {
 	};
 	
     @Instance(MOD_ID)
-    public static DyableBeacons instance;
+    public static DyeableBeacons instance;
     
     @SidedProxy(clientSide = "info.coremodding.dyableBeacons.proxy.ClientProxy", serverSide = "info.coremodding.dyableBeacons.proxy.CommonProxy", modId = MOD_ID)
   	public static CommonProxy proxy;
     
-    private Block dyableBeacon = new BlockDyableBeacon().setBlockName("dyableBeacon").setLightLevel(1.0F).setBlockTextureName("beacon");
+    private Block dyableBeacon = new BlockDyeableBeacon().setBlockName("dyableBeacon").setLightLevel(1.0F).setBlockTextureName("beacon");
     
     
     @EventHandler

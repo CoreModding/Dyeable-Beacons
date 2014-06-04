@@ -1,8 +1,8 @@
-package info.coremodding.dyableBeacons.render.blocks;
+package info.coremodding.dyeableBeacons.render.blocks;
 
 import org.lwjgl.opengl.GL11;
 
-import info.coremodding.dyableBeacons.blocks.BlockDyableBeacon;
+import info.coremodding.dyeableBeacons.blocks.BlockDyeableBeacon;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
@@ -10,7 +10,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 
-public class RenderDyableBeacons implements ISimpleBlockRenderingHandler {
+public class RenderDyeableBeacons implements ISimpleBlockRenderingHandler {
 
 	@Override
 	public void renderInventoryBlock(Block block, int metadata, int modelId,
@@ -98,7 +98,7 @@ public class RenderDyableBeacons implements ISimpleBlockRenderingHandler {
 	@Override
 	public int getRenderId() {
 		// TODO Auto-generated method stub
-		return BlockDyableBeacon.renderID;
+		return BlockDyeableBeacon.renderID;
 	}
 
 }

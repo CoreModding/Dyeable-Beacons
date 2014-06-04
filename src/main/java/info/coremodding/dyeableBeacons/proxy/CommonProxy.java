@@ -1,4 +1,4 @@
-package info.coremodding.dyableBeacons.proxy;
+package info.coremodding.dyeableBeacons.proxy;
 
 public class CommonProxy {
 
