@@ -1,0 +1,17 @@
+#Beacon colors
+tile.dyeableBeacon.black.name=Black Beacon
+tile.dyeableBeacon.red.name=Red Beacon
+tile.dyeablebeacon.green=Green Beacon
+tile.dyeablebeacon.brown=Brown Beacon
+tile.dyeablebeacon.blue=Blue Beacon
+tile.dyeablebeacon.purple=Purple Beacon
+tile.dyeablebeacon.cyan=Cyan Beacon
+tile.dyeablebeacon.silver=Light Grey Beacon
+tile.dyeablebeacon.gray=Grey Beacon
+tile.dyeablebeacon.pink=Pink Beacon
+tile.dyeablebeacon.lime=Lime Beacon
+tile.dyeablebeacon.yellow=Yellow Beacon
+tile.dyeablebeacon.lightBlue=Light Blue Beacon
+tile.dyeablebeacon.magenta=Magenta Beacon
+tile.dyeablebeacon.orange=Orange Beacon
+tile.dyeablebeacon.white=White Beacon
