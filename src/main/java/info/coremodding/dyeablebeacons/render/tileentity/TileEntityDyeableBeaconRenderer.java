@@ -37,8 +37,8 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
 		{25, 22, 22}, //black
 	};
 
-	public void renderTileEntityAt(TileEntityDyeableBeacon tileEntity, double p_147522_2_,
-			double p_147522_4_, double p_147522_6_, float p_147522_8_) {
+	public void renderTileEntityAt(TileEntityDyeableBeacon tileEntity, double x,
+			double y, double z, float time) {
 		float f1 = tileEntity.func_146002_i();
 		GL11.glAlphaFunc(GL11.GL_GREATER, 0.1F);
 		int blockMeta = tileEntity.getBlockMetadata();
@@ -52,7 +52,7 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
 			GL11.glDisable(GL11.GL_BLEND);
 			GL11.glDepthMask(true);
 			OpenGlHelper.glBlendFunc(770, 1, 1, 0);
-			float f2 = (float) tileEntity.getWorldObj().getTotalWorldTime() + p_147522_8_;
+			float f2 = (float) tileEntity.getWorldObj().getTotalWorldTime() + time;
 			float f3 = -f2 * 0.2F - (float) MathHelper.floor_float(-f2 * 0.1F);
 			byte b0 = 1;
 			double d3 = (double) f2 * 0.025D * (1.0D - (double) (b0 & 1) * 2.5D);
@@ -73,28 +73,28 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
 			double d27 = 1.0D;
 			double d28 = (double) (-1.0F + f3);
 			double d29 = (double) (256.0F * f1) * (0.5D / d5) + d28;
-			tessellator.addVertexWithUV(p_147522_2_ + d7, p_147522_4_ + d23, p_147522_6_ + d9, d27, d29);
-			tessellator.addVertexWithUV(p_147522_2_ + d7, p_147522_4_, p_147522_6_ + d9, d27, d28);
-			tessellator.addVertexWithUV(p_147522_2_ + d11, p_147522_4_, p_147522_6_ + d13, d25, d28);
+			tessellator.addVertexWithUV(x + d7, y + d23, z + d9, d27, d29);
+			tessellator.addVertexWithUV(x + d7, y, z + d9, d27, d28);
+			tessellator.addVertexWithUV(x + d11, y, z + d13, d25, d28);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d11, p_147522_4_ + d23, p_147522_6_ + d13, d25, d29);
+			.addVertexWithUV(x + d11, y + d23, z + d13, d25, d29);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d19, p_147522_4_ + d23, p_147522_6_ + d21, d27, d29);
-			tessellator.addVertexWithUV(p_147522_2_ + d19, p_147522_4_, p_147522_6_ + d21, d27, d28);
-			tessellator.addVertexWithUV(p_147522_2_ + d15, p_147522_4_, p_147522_6_ + d17, d25, d28);
+			.addVertexWithUV(x + d19, y + d23, z + d21, d27, d29);
+			tessellator.addVertexWithUV(x + d19, y, z + d21, d27, d28);
+			tessellator.addVertexWithUV(x + d15, y, z + d17, d25, d28);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d15, p_147522_4_ + d23, p_147522_6_ + d17, d25, d29);
+			.addVertexWithUV(x + d15, y + d23, z + d17, d25, d29);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d11, p_147522_4_ + d23, p_147522_6_ + d13, d27, d29);
-			tessellator.addVertexWithUV(p_147522_2_ + d11, p_147522_4_, p_147522_6_ + d13, d27, d28);
-			tessellator.addVertexWithUV(p_147522_2_ + d19, p_147522_4_, p_147522_6_ + d21, d25, d28);
+			.addVertexWithUV(x + d11, y + d23, z + d13, d27, d29);
+			tessellator.addVertexWithUV(x + d11, y, z + d13, d27, d28);
+			tessellator.addVertexWithUV(x + d19, y, z + d21, d25, d28);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d19, p_147522_4_ + d23, p_147522_6_ + d21, d25, d29);
+			.addVertexWithUV(x + d19, y + d23, z + d21, d25, d29);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d15, p_147522_4_ + d23, p_147522_6_ + d17, d27, d29);
-			tessellator.addVertexWithUV(p_147522_2_ + d15, p_147522_4_, p_147522_6_ + d17, d27, d28);
-			tessellator.addVertexWithUV(p_147522_2_ + d7, p_147522_4_, p_147522_6_ + d9, d25, d28);
-			tessellator.addVertexWithUV(p_147522_2_ + d7, p_147522_4_ + d23, p_147522_6_ + d9, d25, d29);
+			.addVertexWithUV(x + d15, y + d23, z + d17, d27, d29);
+			tessellator.addVertexWithUV(x + d15, y, z + d17, d27, d28);
+			tessellator.addVertexWithUV(x + d7, y, z + d9, d25, d28);
+			tessellator.addVertexWithUV(x + d7, y + d23, z + d9, d25, d29);
 			tessellator.draw();
 			GL11.glEnable(GL11.GL_BLEND);
 			OpenGlHelper.glBlendFunc(770, 771, 1, 0);
@@ -115,26 +115,26 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
 			double d22 = 1.0D;
 			double d24 = (double) (-1.0F + f3);
 			double d26 = (double) (256.0F * f1) + d24;
-			tessellator.addVertexWithUV(p_147522_2_ + d30, p_147522_4_ + d18, p_147522_6_ + d4, d22, d26);
-			tessellator.addVertexWithUV(p_147522_2_ + d30, p_147522_4_, p_147522_6_ + d4, d22, d24);
-			tessellator.addVertexWithUV(p_147522_2_ + d6, p_147522_4_, p_147522_6_ + d8, d20, d24);
-			tessellator.addVertexWithUV(p_147522_2_ + d6, p_147522_4_ + d18, p_147522_6_ + d8, d20, d26);
+			tessellator.addVertexWithUV(x + d30, y + d18, z + d4, d22, d26);
+			tessellator.addVertexWithUV(x + d30, y, z + d4, d22, d24);
+			tessellator.addVertexWithUV(x + d6, y, z + d8, d20, d24);
+			tessellator.addVertexWithUV(x + d6, y + d18, z + d8, d20, d26);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d14, p_147522_4_ + d18, p_147522_6_ + d16, d22, d26);
-			tessellator.addVertexWithUV(p_147522_2_ + d14, p_147522_4_, p_147522_6_ + d16, d22, d24);
-			tessellator.addVertexWithUV(p_147522_2_ + d10, p_147522_4_, p_147522_6_ + d12, d20, d24);
+			.addVertexWithUV(x + d14, y + d18, z + d16, d22, d26);
+			tessellator.addVertexWithUV(x + d14, y, z + d16, d22, d24);
+			tessellator.addVertexWithUV(x + d10, y, z + d12, d20, d24);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d10, p_147522_4_ + d18, p_147522_6_ + d12, d20, d26);
-			tessellator.addVertexWithUV(p_147522_2_ + d6, p_147522_4_ + d18, p_147522_6_ + d8, d22, d26);
-			tessellator.addVertexWithUV(p_147522_2_ + d6, p_147522_4_, p_147522_6_ + d8, d22, d24);
-			tessellator.addVertexWithUV(p_147522_2_ + d14, p_147522_4_, p_147522_6_ + d16, d20, d24);
+			.addVertexWithUV(x + d10, y + d18, z + d12, d20, d26);
+			tessellator.addVertexWithUV(x + d6, y + d18, z + d8, d22, d26);
+			tessellator.addVertexWithUV(x + d6, y, z + d8, d22, d24);
+			tessellator.addVertexWithUV(x + d14, y, z + d16, d20, d24);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d14, p_147522_4_ + d18, p_147522_6_ + d16, d20, d26);
+			.addVertexWithUV(x + d14, y + d18, z + d16, d20, d26);
 			tessellator
-			.addVertexWithUV(p_147522_2_ + d10, p_147522_4_ + d18, p_147522_6_ + d12, d22, d26);
-			tessellator.addVertexWithUV(p_147522_2_ + d10, p_147522_4_, p_147522_6_ + d12, d22, d24);
-			tessellator.addVertexWithUV(p_147522_2_ + d30, p_147522_4_, p_147522_6_ + d4, d20, d24);
-			tessellator.addVertexWithUV(p_147522_2_ + d30, p_147522_4_ + d18, p_147522_6_ + d4, d20, d26);
+			.addVertexWithUV(x + d10, y + d18, z + d12, d22, d26);
+			tessellator.addVertexWithUV(x + d10, y, z + d12, d22, d24);
+			tessellator.addVertexWithUV(x + d30, y, z + d4, d20, d24);
+			tessellator.addVertexWithUV(x + d30, y + d18, z + d4, d20, d26);
 			tessellator.draw();
 			GL11.glEnable(GL11.GL_LIGHTING);
 			GL11.glEnable(GL11.GL_TEXTURE_2D);
@@ -144,10 +144,6 @@ public class TileEntityDyeableBeaconRenderer extends TileEntitySpecialRenderer {
 		GL11.glAlphaFunc(GL11.GL_GREATER, 0.5F);
 	}
 
-	@Override
-	public void func_147496_a(World p_147496_1_) {
-		new RenderBlocks(p_147496_1_);
-	}
 
 	@Override
 	public void renderTileEntityAt(TileEntity p_147500_1_, double p_147500_2_, double p_147500_4_,

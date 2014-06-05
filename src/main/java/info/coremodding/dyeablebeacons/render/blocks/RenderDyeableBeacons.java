@@ -18,19 +18,19 @@ public class RenderDyeableBeacons implements ISimpleBlockRenderingHandler {
 			RenderBlocks renderer) {
 		Tessellator tessellator = Tessellator.instance;
 		
-		for (int k = 0; k < 3; ++k)
+		for (int partID = 0; partID < 3; ++partID)
          {
-             if (k == 0)
+             if (partID == 0)
              {
             	 renderer.setRenderBounds(0.125D, 0.0D, 0.125D, 0.875D, 0.1875D, 0.875D);
             	 renderer.setOverrideBlockTexture(renderer.getBlockIcon(Blocks.obsidian));
              }
-             else if (k == 1)
+             else if (partID == 1)
              {
             	 renderer.setRenderBounds(0.1875D, 0.1875D, 0.1875D, 0.8125D, 0.875D, 0.8125D);
                  renderer.setOverrideBlockTexture(renderer.getBlockIcon(Blocks.beacon));
              }
-             else if (k == 2)
+             else if (partID == 2)
              {
             	 renderer.setRenderBounds(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
             	 renderer.setOverrideBlockTexture(Blocks.stained_glass.getIcon(0, metadata));
@@ -73,16 +73,16 @@ public class RenderDyeableBeacons implements ISimpleBlockRenderingHandler {
 	public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z,
 			Block block, int modelId, RenderBlocks renderer) {
 
-        float f = 0.1875F;
+        final float lowerHeight = 0.1875F;
         renderer.setOverrideBlockTexture(Blocks.stained_glass.getIcon(0, world.getBlockMetadata(x, y, z)));
         renderer.setRenderBounds(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
         renderer.renderStandardBlock(block, x, y, z);
         renderer.renderAllFaces = true;
         renderer.setOverrideBlockTexture(renderer.getBlockIcon(Blocks.obsidian));
-        renderer.setRenderBounds(0.125D, 0.0062500000931322575D, 0.125D, 0.875D, (double)f, 0.875D);
+        renderer.setRenderBounds(0.125D, 0.0062500000931322575D, 0.125D, 0.875D, (double)lowerHeight, 0.875D);
         renderer.renderStandardBlock(block, x, y, z);
         renderer.setOverrideBlockTexture(renderer.getBlockIcon(Blocks.beacon));
-        renderer.setRenderBounds(0.1875D, (double)f, 0.1875D, 0.8125D, 0.875D, 0.8125D);
+        renderer.setRenderBounds(0.1875D, (double)lowerHeight, 0.1875D, 0.8125D, 0.875D, 0.8125D);
         renderer.renderStandardBlock(block, x, y, z);
         renderer.renderAllFaces = false;
         renderer.clearOverrideBlockTexture();

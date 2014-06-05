@@ -7,8 +7,8 @@ import net.minecraft.item.ItemStack;
 
 public class ItemBlockDyableBeacon extends ItemBlock {
 
-  public ItemBlockDyableBeacon(Block p_i45328_1_) {
-    super(p_i45328_1_);
+  public ItemBlockDyableBeacon(Block block) {
+    super(block);
 
     setHasSubtypes(true);
   }
