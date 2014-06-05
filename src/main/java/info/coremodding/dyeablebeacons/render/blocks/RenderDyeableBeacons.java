@@ -1,8 +1,9 @@
-package info.coremodding.dyeableBeacons.render.blocks;
+package info.coremodding.dyeablebeacons.render.blocks;
 
 import org.lwjgl.opengl.GL11;
 
-import info.coremodding.dyeableBeacons.blocks.BlockDyeableBeacon;
+import info.coremodding.dyeablebeacons.blocks.BlockDyeableBeacon;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
