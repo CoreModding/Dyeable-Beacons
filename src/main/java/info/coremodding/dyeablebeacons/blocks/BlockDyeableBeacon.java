@@ -14,90 +14,69 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
 import info.coremodding.dyeablebeacons.tileentity.TileEntityDyeableBeacon;
 
 public class BlockDyeableBeacon extends BlockBeacon {
-  public BlockDyeableBeacon() {
-    setBlockName("dyeableBeacon");
-    setLightLevel(1.0F);
-    setBlockTextureName("beacon");
-  }
+	public BlockDyeableBeacon() {
+		setBlockName("dyeableBeacon");
+		setLightLevel(1.0F);
+		setBlockTextureName("beacon");
+	}
 
-  public static int renderID;
+	public static int renderID;
 
-  @Override
-  public int getRenderType() {
-    return renderID;
-  }
+	@Override
+	public int getRenderType() {
+		return renderID;
+	}
 
-  @Override
-  public TileEntity createNewTileEntity(World world, int meta) {
-    return new TileEntityDyeableBeacon();
-  }
+	@Override
+	public TileEntity createNewTileEntity(World world, int meta) {
+		return new TileEntityDyeableBeacon();
+	}
 
-  @Override
-  public int damageDropped(int metadata) {
-    return metadata;
-  }
+	@Override
+	public int damageDropped(int metadata) {
+		return metadata;
+	}
 
-  @SideOnly(Side.CLIENT)
-  @Override
-  public void getSubBlocks(Item item, CreativeTabs tab, List list) {
-    for (int i = 0; i < 16; ++i) {
-      list.add(new ItemStack(item, 1, i));
-    }
-  }
-
-
-  private static final IIcon[] field_149998_a = new IIcon[16];
-
-  @Override
-  public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
-    return Blocks.stained_glass.getIcon(p_149691_1_, p_149691_2_);
-  }
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void getSubBlocks(Item item, CreativeTabs tab, List list) {
+		for (int i = 0; i < 16; ++i) {
+			list.add(new ItemStack(item, 1, i));
+		}
+	}
 
 
-  /**
-   * Returns the quantity of items to drop on block destruction.
-   */
-  public int quantityDropped(Random p_149745_1_) {
-    return 0;
-  }
+	private static final IIcon[] icons = new IIcon[16];
 
-  @SideOnly(Side.CLIENT)
-  public static int func_149997_b(int p_149997_0_) {
-    return ~p_149997_0_ & 15;
-  }
+	@Override
+	public IIcon getIcon(int side, int meta) {
+		return Blocks.stained_glass.getIcon(side, meta);
+	}
 
-  @Override
-  public int getRenderBlockPass() {
-    return 1;
-  }
+	@SideOnly(Side.CLIENT)
+	public static int func_149997_b(int unknown) {
+		return ~unknown & 15;
+	}
 
-  @SideOnly(Side.CLIENT)
-  public void registerBlockIcons(IIconRegister p_149651_1_) {
-    for (int i = 0; i < field_149998_a.length; ++i) {
-      // field_149998_a[i] =
-      // p_149651_1_.registerIcon(Block.getBlockFromName("stained_glass").getTextureName() + "_" +
-      // ItemDye.field_150921_b[func_149997_b(i)]);
-    }
-  }
+	@Override
+	public int getRenderBlockPass() {
+		return 1;
+	}
 
-  /**
-   * Return true if a player with Silk Touch can harvest this block directly, and not its normal
-   * drops.
-   */
-  protected boolean canSilkHarvest() {
-    return true;
-  }
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		for (int i = 0; i < icons.length; ++i) {
+			// field_149998_a[i] =
+			// p_149651_1_.registerIcon(Block.getBlockFromName("stained_glass").getTextureName() + "_" +
+			// ItemDye.field_150921_b[func_149997_b(i)]);
+		}
+	}
 
-  /**
-   * If this block doesn't render as an ordinary block it will return False (examples: signs,
-   * buttons, stairs, etc)
-   */
-  public boolean renderAsNormalBlock() {
-    return false;
-  }
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
 
 }
