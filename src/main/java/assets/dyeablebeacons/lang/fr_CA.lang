@@ -1,0 +1,17 @@
+#Beacon colors
+tile.dyeableBeacon.black.name.name=Balise noire
+tile.dyeableBeacon.red.name.name=Balise rouge 
+tile.dyeableBeacon.green.name=Balise verte 
+tile.dyeableBeacon.brown.name=Balise marron
+tile.dyeableBeacon.blue.name=Balise bleue
+tile.dyeableBeacon.purple.name=Balise violette
+tile.dyeableBeacon.cyan.name=Balise cyan
+tile.dyeableBeacon.silver.name=Balise gris clair
+tile.dyeableBeacon.gray.name=Balise grise
+tile.dyeableBeacon.pink.name=Balise rose
+tile.dyeableBeacon.lime.name=Balise vert clair
+tile.dyeableBeacon.yellow.name=Balise jaune
+tile.dyeableBeacon.lightBlue.name=Balise bleu clair
+tile.dyeableBeacon.magenta.name=Balise magenta
+tile.dyeableBeacon.orange.name=Balise orange
+tile.dyeableBeacon.white.name=Balise blanche
