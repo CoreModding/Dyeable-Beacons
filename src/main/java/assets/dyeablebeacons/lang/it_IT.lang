@@ -1,0 +1,17 @@
+#Beacon colors
+tile.dyeableBeacon.black.name.name=Faro Nero
+tile.dyeableBeacon.red.name.name=Faro Rosso
+tile.dyeableBeacon.green.name=Faro Verde
+tile.dyeableBeacon.brown.name=Faro Marrone
+tile.dyeableBeacon.blue.name=Faro Blu
+tile.dyeableBeacon.purple.name=Faro Viola
+tile.dyeableBeacon.cyan.name=Faro Cyan
+tile.dyeableBeacon.silver.name=Faro Grigio Chiaro
+tile.dyeableBeacon.gray.name=Faro Grigia
+tile.dyeableBeacon.pink.name=Faro Rosa
+tile.dyeableBeacon.lime.name=Faro Lime
+tile.dyeableBeacon.yellow.name=Faro Gialla
+tile.dyeableBeacon.lightBlue.name=Faro Blu Chiaro
+tile.dyeableBeacon.magenta.name=Faro Magenta
+tile.dyeableBeacon.orange.name=Faro Arancione
+tile.dyeableBeacon.white.name=Faro Bianco
