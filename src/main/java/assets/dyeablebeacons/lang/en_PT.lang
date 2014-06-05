@@ -1,0 +1,17 @@
+#Beacon colors
+tile.dyeableBeacon.black.name.name=Black Buoy
+tile.dyeableBeacon.red.name.name=Red Buoy
+tile.dyeableBeacon.green.name=Green Buoy
+tile.dyeableBeacon.brown.name=Brown Buoy
+tile.dyeableBeacon.blue.name=Blue Buoy
+tile.dyeableBeacon.purple.name=Purple Buoy
+tile.dyeableBeacon.cyan.name=Cyan Buoy
+tile.dyeableBeacon.silver.name=Silver Buoy
+tile.dyeableBeacon.gray.name=Gray Buoy
+tile.dyeableBeacon.pink.name=Pink Buoy
+tile.dyeableBeacon.lime.name=Lime Buoy
+tile.dyeableBeacon.yellow.name=Yellow Buoy
+tile.dyeableBeacon.lightBlue.name=Light Blue Buoy
+tile.dyeableBeacon.magenta.name=Magenta Buoy
+tile.dyeableBeacon.orange.name=Orange Buoy
+tile.dyeableBeacon.white.name=White Buoy
