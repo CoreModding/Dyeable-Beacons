@@ -21,6 +21,6 @@ public class ItemBlockDyableBeacon extends ItemBlock {
 
   @Override
   public String getUnlocalizedName(ItemStack itemstack) {
-    return getUnlocalizedName() + "." + ItemDye.field_150923_a[itemstack.getItemDamage()];
+    return getUnlocalizedName() + "." + ItemDye.field_150923_a[15-itemstack.getItemDamage()];
   }
 }
